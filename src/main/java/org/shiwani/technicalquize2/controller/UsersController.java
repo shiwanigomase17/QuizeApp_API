@@ -27,6 +27,7 @@ public class UsersController {
         return usersService.delete(password,email);
     }
 
+//Login
     @GetMapping("/authenticate")
     public ResponseEntity<String> authenticate(@RequestParam String email,@RequestParam String password) {
         return usersService.authenticate(email,password);

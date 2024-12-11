@@ -38,7 +38,7 @@ public class QuizController {
 
     }
 
-    @PostMapping("getScore")
+    @PostMapping("/getScore")
     public ResponseEntity<Integer> getScore(@RequestParam String key,
                                             @RequestBody QuizAnswersDTO quizAnswersDTO) {
         List<Integer> questionIds = quizAnswersDTO.getQuestionIds();
@@ -46,7 +46,7 @@ public class QuizController {
         return quizService.getScore(key, questionIds, answers);
     }
 
-    @GetMapping("getAllScoreByPercentage")
+    @GetMapping("/getAllScoreByPercentage")
     public ResponseEntity<List<QuizScore>> getAllScoreByPercentage() {
         return quizService.getAllScoreByPercentage();
     }

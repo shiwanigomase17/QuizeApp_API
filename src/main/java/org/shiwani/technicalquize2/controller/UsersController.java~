@@ -1,9 +1,9 @@
 package org.shiwani.technicalquize2.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.shiwani.technicalquiz.dto.UserDTO;
-import org.shiwani.technicalquiz.pojo.Users;
-import org.shiwani.technicalquiz.service.UsersService;
+import org.shiwani.technicalquize2.dto.UserDTO;
+import org.shiwani.technicalquize2.pojo.Users;
+import org.shiwani.technicalquize2.service.UsersService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,7 +26,8 @@ public class UsersController {
         System.out.println(email);
         return usersService.delete(password,email);
     }
-
+    
+//Login
     @GetMapping("/authenticate")
     public ResponseEntity<String> authenticate(@RequestParam String email,@RequestParam String password) {
         return usersService.authenticate(email,password);
