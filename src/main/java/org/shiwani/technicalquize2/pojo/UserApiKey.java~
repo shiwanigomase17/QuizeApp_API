@@ -1,0 +1,11 @@
+package org.shiwani.technicalquiz.pojo;
+
+import lombok.Data;
+
+@Data
+public class UserApiKey {
+    private String email;
+    private String role;
+    private String apiKey;
+}
+
